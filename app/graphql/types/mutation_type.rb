@@ -2,5 +2,6 @@
 
 module Types
   class MutationType < Types::BaseObject
+    field :create_brand, mutation: Mutations::Brand::CreateBrand
   end
 end
