@@ -1,12 +1,16 @@
 module Resolvers
   module Brands
-    class BrandsResolver < BaseResolver
+    class BrandsResolver < Types::Common::SearchableQueryType
       description "Get all brands"
 
-      type [Types::BrandType], null: false
+      scope { Brand.all }
 
-      def resolve
-        Brand.all
+      option :name, type: String, required: false, with: :apply_name
+
+      type [Types::BrandType], null: true
+
+      def apply_name(scope, value)
+        scope.where("name ILIKE ?", escape_search_term(value)) if value.present?
       end
     end
   end

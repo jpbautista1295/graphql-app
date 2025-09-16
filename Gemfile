@@ -40,8 +40,9 @@ gem "graphiql-rails"
 gem "jsbundling-rails", "~> 1.3"
 gem "propshaft"
 gem "redis"
-gem 'turbo-rails'
-gem 'stimulus-rails'
+gem "search_object_graphql"
+gem "turbo-rails"
+gem "stimulus-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

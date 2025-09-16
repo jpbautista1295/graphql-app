@@ -282,6 +282,10 @@ GEM
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
+    search_object (1.2.5)
+    search_object_graphql (1.0.5)
+      graphql (> 1.8)
+      search_object (~> 1.2.5)
     securerandom (0.4.1)
     solid_cable (3.0.12)
       actioncable (>= 7.2)
@@ -358,6 +362,7 @@ DEPENDENCIES
   rails (~> 8.0.2, >= 8.0.2.1)
   redis
   rubocop-rails-omakase
+  search_object_graphql
   solid_cable
   solid_cache
   solid_queue
